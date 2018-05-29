@@ -1,6 +1,6 @@
 import React from 'react';
 import Timer from './Timer.js';
-import Postit from './Todo.js';
+import PostIt from './Todo.js';
 import Weather from './Weather.js';
 import Currency from './Currency.js';
 
@@ -20,7 +20,7 @@ class Main extends React.Component {
 	       	 	</div>
 
 			 <div className="col-xs-12 col-sm-8 NewNoteBox">
-				<Postit/>
+				<PostIt/>
 			 </div>
 
 			 </div>

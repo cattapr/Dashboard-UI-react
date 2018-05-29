@@ -1,14 +1,12 @@
 import React from 'react';
 
-class Postit extends React.Component {
-
-  render() {
-    return (
-      <div>
-        <p>Postit</p>
-      </div>
-    );
-  }
+class PostIt extends React.Component {
+   
+    render() {
+        return (
+            <h1> Postit</h1>
+        )
+    }
 }
 
-export default Postit;
+export default PostIt;
