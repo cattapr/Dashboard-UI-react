@@ -1,0 +1,44 @@
+import React from 'react';
+
+class Currency extends React.Component {
+    state = {
+    	data: '',
+        date: '',
+        rates: {
+            EUR: '',
+            SEK: ''
+        }
+    }
+
+    componentDidMount() {
+        this.fetchCurrency();
+    }
+
+    fetchCurrency = () => {
+        fetch('http://data.fixer.io/api/latest?access_key=fe21b7321aa53d1a4dd706d7fff65038')
+        .then(response => response.json())
+        .then((data) => {
+            this.setState({ data: data, date: data.date, rates: { SEK: data.rates.SEK, EUR: data.rates.EUR } })
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    }
+
+    calcCurrency = () => {
+        let sum = this.state.rates.EUR / this.state.rates.SEK;
+        return sum.toFixed(3);
+    }
+
+    render(){
+
+        return (
+            <div>
+			   <p>{this.state.rates.EUR} euro = {this.state.rates.SEK} SEK</p>
+                    <p>1 SEK = { this.calcCurrency() } euro</p>
+             </div>
+        );
+    }
+}
+
+export default Currency;
