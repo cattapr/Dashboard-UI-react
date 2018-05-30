@@ -12,6 +12,7 @@
   height: 230px;
   padding: 20px;
   color: white;
+  margin-bottom: 50px;
 }
 
 .App-title {
@@ -20,6 +21,93 @@
 
 .App-intro {
   font-size: large;
+}
+
+.row {
+  margin-top: 30px;
+}
+
+
+
+.weatherInfoChart, .timerChart, .currencyChart{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 30%;
+  margin-left: 30px;
+  margin-bottom: 20px; 
+  padding-top: 20px; 
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.shartTitle{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  padding-bottom: 5px;
+}
+img {
+  width: 30%;
+}
+.timerClock {
+  font-size: 2.3em;
+}
+
+#postIt{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  height: 280px;
+}
+
+
+#notesSubmit{
+margin: 0px;
+padding:5px;
+}
+
+button {
+  background: #6baa9b;
+  color: #fff;
+  padding: 0.2rem 1rem 0.4rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  margin: 10px 10px;
+  transition: ease background 0.3s;
+  cursor: pointer;
+}
+
+button:hover{
+    transition: ease background 0.3s;
+    background: rgba(108, 204, 189,0.6);
+}
+
+.topBar{
+  z-index:1;
+  position:absolute;
+  width:95%;
+  height:40px;
+  background-color:#f39c12;
+}
+.form{
+  margin-top:40px;
+  position:absolute;
+  width:95%;
+  height:160px;
+  background-color:#f1c40f;
+}
+.postItNote{
+  position:absolute;
+  border-color:red;
+  width:180px;
+  height:140px;
+  position:absolute;
+  margin:10px;
+  font-family: 'Lato', sans-serif;
+  overflow:hide;
+}
+.postItNote:focus{
+  outline: 0;
 }
 
 

@@ -1,9 +1,14 @@
 import React from 'react';
+import ChartTitle from './ChartTitle.js';
 
 class Timer extends React.Component {
     
     state = {
     	secondsElapsed: 0
+    }
+
+    getHours = () => {
+    	return Math.floor(this.state.secondsElapsed / 3600);
     }
 
 	getMinutes = () => {
@@ -26,13 +31,22 @@ class Timer extends React.Component {
 		clearInterval(this.incrementer);
 	}
 
+	handleResetClick = () => {
+	  return this.setState({
+	  	secondElapsed: (this.state.secondsElapsed = '00')
+	});
+	}
+
 	render(){
-		return (<div>
-		<h1>{this.getMinutes()}:{this.getSeconds()}</h1>
-			<button type="button" onClick = {this.handleStartClick}>Start</button>
-			<button type="button" onClick = {this.handleStopClick}>Stop</button>
-			<button type="button" onClick = {this.handleResetClick}>Reset</button>
-		</div>);
+		return (
+			<div className="col-xs-3 col-sm-3 timerChart">
+				<ChartTitle/>
+				<p className="timerClock">{this.getHours()}{this.getMinutes()}:{this.getSeconds()}</p>
+				<button type="button" onClick = {this.handleStartClick}>Start</button>
+				<button type="button" onClick = {this.handleStopClick}>Stop</button>
+				<button type="button" onClick = {this.handleResetClick}>Reset</button>
+			</div>
+		);
 	}
 };
 

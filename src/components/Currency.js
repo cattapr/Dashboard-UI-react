@@ -14,6 +14,7 @@ class Currency extends React.Component {
     }
 
     fetchCurrency = () => {
+        console.log('hej');
         fetch('http://data.fixer.io/api/latest?access_key=7f628aef40d7561fd2819bfe382c812b')
         .then(response => response.json())
         .then((data) => {
@@ -32,7 +33,8 @@ class Currency extends React.Component {
     render(){
 
         return (
-            <div>
+            <div className="col-xs-6 col-sm-3 currencyChart">
+                <h4 className="shartTitle">Currency</h4>
                 <p>Updated: {this.state.date}</p>
     			<p>{this.state.rates.EUR} € = {this.state.rates.SEK} SEK</p>
                 <p>1 SEK = { this.calculateCurrency() } euro</p>

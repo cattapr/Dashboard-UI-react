@@ -8,29 +8,13 @@ class Main extends React.Component {
 	render(){
 	   return (
     	<div className="container">
-	    	<div className="row">
-		    	<div className="col-xs-12 WeatherBox">
-				     <Weather/>
-				 </div>
-			 </div>
-
-			 <div className="row">
-		    	<div className="col-xs-12 col-sm-4 TimerBox">
-			      <Timer/>
-	       	 	</div>
-
-			 <div className="col-xs-12 col-sm-8 NewNoteBox">
-				<PostIt/>
-			 </div>
-
-			 </div>
-
+    	<h1 className="App-title">Dashboard</h1>
+    			<Weather/>	
 			<div className="row">
-				<div className="col-xs-12 col-sm-12 CurrencyBox">
-			     	<Currency/>
-			     </div>
+				<PostIt/>
+				<Timer/>
+				<Currency/>
 			</div>
-	 
         </div>
    	  )
 	}	
