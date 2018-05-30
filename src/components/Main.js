@@ -8,7 +8,6 @@ class Main extends React.Component {
 	render(){
 	   return (
     	<div className="container">
-    	<h1 className="App-title">Dashboard</h1>
     			<Weather/>	
 			<div className="row">
 				<PostIt/>

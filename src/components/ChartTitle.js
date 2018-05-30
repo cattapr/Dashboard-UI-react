@@ -1,10 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class ChartTitle extends React.Component {
-	render(){
-		return(<h4 className="shartTitle">Timer Clock</h4>)
-
-	}
+const ChartTitle = (props) => {
+		return(<h4 className={props.chartTitleClass}>{props.chartTitle}</h4>)
 }
 
 export default ChartTitle;

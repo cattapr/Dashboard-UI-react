@@ -1,4 +1,5 @@
 import React from 'react';
+import ChartTitle from './ChartTitle.js';
 
 class Currency extends React.Component {
     state = {
@@ -34,7 +35,7 @@ class Currency extends React.Component {
 
         return (
             <div className="col-xs-6 col-sm-3 currencyChart">
-                <h4 className="shartTitle">Currency</h4>
+                <ChartTitle chartTitleClass="chart-title" chartTitle={'Currency'}/>
                 <p>Updated: {this.state.date}</p>
     			<p>{this.state.rates.EUR} € = {this.state.rates.SEK} SEK</p>
                 <p>1 SEK = { this.calculateCurrency() } euro</p>
