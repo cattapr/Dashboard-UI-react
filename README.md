@@ -4,7 +4,7 @@ Av Catalina Pradilla Rocha
 
 Gå till repository: <https://github.com/cattapr/Dashboard-UI-react>
 
-Se appen på GitHub Pages: <https://github.com/cattapr/Dashboard-UI-react/tree/gh-pages>
+Se appen på GitHub Pages: <http://cattapr.github.io/Dashboard-UI-react>
 
 ## Description
 
