@@ -15,7 +15,7 @@ class Weather extends React.Component {
     }
 
     fetchWeather = () => {
-        fetch('http://api.openweathermap.org/data/2.5/forecast?units=metric&id=2673722&APPID=00b34700d68c834e8dd5cc72cc067405')
+        fetch('https://api.openweathermap.org/data/2.5/forecast?units=metric&id=2673722&APPID=00b34700d68c834e8dd5cc72cc067405')
         .then(response => response.json())
         .then((data) => {
                 let latestWeather = [];

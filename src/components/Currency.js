@@ -17,7 +17,7 @@ class Currency extends React.Component {
 
     fetchCurrency = () => {
         console.log('hej');
-        fetch('http://data.fixer.io/api/latest?access_key=7f628aef40d7561fd2819bfe382c812b')
+        fetch('https://data.fixer.io/api/latest?access_key=7f628aef40d7561fd2819bfe382c812b')
         .then(response => response.json())
         .then((data) => {
             this.setState({ date: data.date, rates: { SEK: data.rates.SEK, EUR: data.rates.EUR } })
