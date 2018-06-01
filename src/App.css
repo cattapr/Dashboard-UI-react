@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #8b8e8e;
   height: 230px;
   padding: 20px;
   color: white;
@@ -23,15 +23,50 @@
   font-size: large;
 }
 
+
+/**************************************/
+/************* TYPOGRAPHI *************/
+/**************************************/
+
+.container {
+  height: 700px;
+}
+
 .row {
   margin-top: 30px;
+}
+
+/**************************************/
+/*************** CHARTS ****************/
+/**************************************/
+
+.weatherChart {
+    background: rgba(157, 127, 193,0.7);
+    padding-top: 15px;
+    padding-left: 10%;
+    border-radius: 3px;
+}
+
+.weatherInfoChart {
+  background-color: white;
+}
+
+img {
+  width: 30%;
+}
+
+.timerChart {
+  background-color: rgba(99, 177, 221, 0.84);
+}
+
+.currencyChart {
+  background-color: rgba(118, 198, 201, 0.84);
 }
 
 .weatherInfoChart, .timerChart, .currencyChart{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   width: 30%;
-  margin-left: 30px;
   margin-bottom: 20px; 
   padding-top: 20px; 
   padding-bottom: 20px;
@@ -39,27 +74,50 @@
 }
 
 .chart-title{
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  padding-bottom: 5px;
+  border-bottom: 1.3px solid rgba(0, 0, 0, 0.4);
+  padding-bottom: 10px;
 }
-img {
-  width: 30%;
-}
+
 .timerClock {
   font-size: 2.3em;
 }
 
-#postIt{
+#postitChart{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px; 
   border-radius: 4px;
-  height: 280px;
+  height: 350px;
 }
 
-
-#notesSubmit{
-margin: 0px;
-padding:5px;
+.postItNote {
+  width: 100%;
 }
+
+.noteStyle {
+  font-family: Pacifico, cursive;
+  font-size: 1.4em;
+  margin: 5px 30px;
+}
+
+.topBar{
+  z-index:1;
+  position:absolute;
+  width:95%;
+  height:40px;
+  background-color:#80e47e;
+}
+
+.temp {
+  font-size: 2.1em;
+}
+
+.weatherDate{
+  font-weight: bold;
+}
+
+/**************************************/
+/*************** BUTTONS ****************/
+/**************************************/
 
 button {
   background: #6baa9b;
@@ -80,20 +138,33 @@ button:hover{
     background: rgba(108, 204, 189,0.6);
 }
 
-.topBar{
-  z-index:1;
-  position:absolute;
-  width:95%;
-  height:40px;
-  background-color:#f39c12;
+#notesSubmit{
+  margin: 5px;
+  padding: 5px 12px;
 }
+
+.timer-buttons{
+  margin-left:20px;
+  margin-bottom: 5px;
+}
+
+.reset-timer {
+  margin-left: 70px;
+}
+
+
+/**************************************/
+/******** CHARTTITLE & FORMS ********/
+/**************************************/
+
 .form{
   margin-top:40px;
   position:absolute;
   width:95%;
-  height:160px;
-  background-color:#f1c40f;
+  height:180px;
+  background-color:#90ee90;
 }
+
 .postItNote{
   position:absolute;
   border-color:red;
@@ -108,8 +179,49 @@ button:hover{
   outline: 0;
 }
 
+#NoteInput {
+  width: 100%!important;
+}
+
+
+/**************************************/
+/************** ICONS ****************/
+/**************************************/
+
+.fa-thumbtack {
+  color: rgb(178, 16, 45);
+  transform: rotate(-45deg);
+  margin-top: 7px;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+/**************************************/
+/************ SMALL DESKTOPS *************/
+/**************************************/
+
+@media screen and (min-width: 768px) {
+  .reset-timer {
+    margin-left: 40px;
+  }
+}
+
+
+/**************************************/
+/************ LARGE DESKTOPS *************/
+/**************************************/
+
+@media screen and (min-width: 992px) {
+  .reset-timer {
+    margin-left: 10px;
+  }
+
+  .weatherInfoChart, .timerChart, .currencyChart{
+  margin-left: 30px;
+  }
+}
+

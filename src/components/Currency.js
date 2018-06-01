@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ChartTitle from './ChartTitle.js';
 
@@ -34,11 +35,11 @@ class Currency extends React.Component {
     render(){
 
         return (
-            <div className="col-xs-6 col-sm-3 currencyChart">
+            <div className="col-xs-12 col-sm-3 currencyChart">
                 <ChartTitle chartTitleClass="chart-title" chartTitle={'Currency'}/>
                 <p>Updated: {this.state.date}</p>
-    			<p>{this.state.rates.EUR} € = {this.state.rates.SEK} SEK</p>
-                <p>1 SEK = { this.calculateCurrency() } euro</p>
+    			<p>{this.state.rates.EUR} €  <i class="fas fa-exchange-alt"></i>  {this.state.rates.SEK} SEK</p>
+                <p>1 SEK  <i class="fas fa-exchange-alt"></i> { this.calculateCurrency() }  €</p>
                 <button onClick={this.fetchCurrency}>Get todays rate</button>
              </div>
         );

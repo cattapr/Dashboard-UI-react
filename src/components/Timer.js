@@ -39,13 +39,21 @@ class Timer extends React.Component {
 	}
 
 	render(){
+		let spinner = "";
+		if(this.state.secondsElapsed > 0){	
+			spinner = "fa-spin";
+		}
 		return (
-			<div className="col-xs-3 col-sm-3 timerChart">
+			<div className="col-xs-12 col-sm-3 timerChart">
 				<ChartTitle chartTitleClass="chart-title" chartTitle={'Timer'}/>
+				<i className={`fas fa-circle-notch fa-5x ${spinner}`}>
+				</i>
 				<p className="timerClock">{this.getHours()}{this.getMinutes()}:{this.getSeconds()}</p>
-				<TimerButton buttonClass="start-timer" event={this.handleStartClick} title={'Start'}/>
-				<TimerButton buttonClass="stop-timer" event={this.handleStopClick} title={'Stop'}/>
-				<TimerButton buttonClass="reset-timer" event={this.handleResetClick} title={'Reset'}/>
+				<div className="row">
+					<TimerButton buttonClass="start-timer" event={this.handleStartClick} title={'Start'}/>
+					<TimerButton buttonClass="stop-timer" event={this.handleStopClick} title={'Stop'}/>
+					<TimerButton buttonClass="reset-timer" event={this.handleResetClick} title={'Reset'}/>
+				</div>
 			</div>
 		);
 	}

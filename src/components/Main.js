@@ -1,6 +1,6 @@
 import React from 'react';
 import Timer from './Timer.js';
-import PostIt from './Todo.js';
+import PostIt from './Postit.js';
 import Weather from './Weather.js';
 import Currency from './Currency.js';
 

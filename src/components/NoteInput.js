@@ -4,7 +4,7 @@ const NoteInput = (props) => {
     return (
     	<div className="postAnote">
 	        <form id = {props.formID}>
-	            <textarea id={props.NoteInputID} >
+	            <textarea id={props.NoteInputID} placeholder={props.placeHolder}>
 	            </textarea>
 	            <button id={props.buttonID} onClick={props.event}>Post it</button>
 	        </form>
